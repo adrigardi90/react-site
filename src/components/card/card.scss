@@ -1,0 +1,27 @@
+.mdl-card {
+    font-size: 18px;
+
+    & .img-container {
+        margin: 0px;
+        text-align: center;
+        display: flex;
+        align-items: center; //width: 30%
+
+        >img {
+            max-height: 160px
+        }
+    }
+
+    & h2 {
+        font-weight: inherit;
+    }
+
+    & .mdl-chip {
+        margin-right: 8px;
+    }
+    
+    & p {
+        margin: 7px 0 16px;
+        font-size: 18px;
+    }
+}

@@ -13,7 +13,7 @@ export const Projects = () => (
               img={job.image}
               description={job.description}
               tags={job.tags}
-              project={job.project}></Card>
+              project={job.project}/>
           ))
         } 
     </div>

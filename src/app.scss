@@ -1,8 +1,8 @@
 
-  .App-logo {
-   
-    //height: 80px;
-  }
+ html, body {
+  font-family: sans-serif;
+  font-size: 18px !important;
+ }
  
   @keyframes App-logo-spin {
     from { transform: rotate(0deg); }
@@ -26,82 +26,9 @@
 
 
 
-.portfolio_header{
-  background-image: url(images/bg2.jpg);
-  // padding-top: 25px;
-  color: black;
-
-  & a{
-    color: black
-  }
-
-  & .mdl-layout__header-row{
-    height: auto;
-
-    
-    
-
-    
-  }
-
-  & .portfolio_nav_container {
-    background-color: rgba(0, 0, 0, 0.08);
-
-    & nav{
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-   
-
-  }
-}
 
 
-.portolio_logo_container{
- // margin: 0 auto;
-  //width: 12em;
-  padding-top: 25px;
- 
 
-  & a{
-    margin: 0 10px 0 10px;
-  }
-  //display:none
-}
-
-.portfolio_logo{
-  background: url(images/me.jpg) 50% no-repeat;
-  background-size: cover;
-  height: 120px;
-  width: 120px;
-  margin: auto auto 10px;
-  border-radius: 30%;
-  box-shadow: 0px 1px 10px 0px black;
-}
-
-.portfolio_logo_twitter{
-  background: url(images/twitter.png) 50% no-repeat;
-  background-size: cover;
-  height: 30px;
-  width: 30px;
-  margin: auto auto 10px;
-}
-.portfolio_logo_github{
-  background: url(images/gh.png) 50% no-repeat;
-  background-size: cover;
-  height: 30px;
-  width: 30px;
-  margin: auto auto 10px;
-}
-
-.portfolio_logo_linkedin{
-  background: url(images/in.png) 50% no-repeat;
-  background-size: cover;
-  height: 30px;
-  width: 30px;
-  margin: auto auto 10px;
-}
 
 .mdl-navigation {
   //display: none;
@@ -143,10 +70,16 @@
   display: flex
 }
 
-.portfolio_body_container{
-  text-align: center;
-  margin: 4em 0 1em 0;
-}
+// .portfolio_body_container{
+//   text-align: center;
+//   margin: 4em 0 1em 0;
+  
+// }
+
+// .portfolio_body{
+//   background-image: url(./images/arq4.png);
+//   height: -webkit-fill-available;
+// }
 
 @media screen and (min-width:900px) {
 
@@ -214,34 +147,11 @@
   align-items: center;
 }
 
-.mdl-card {
-
-  & .img-container{
-    margin: 0px;
-    text-align: center
-    //width: 30%
-  }
-  & span {
-    //margin-right: 8px;
-  }
-  & img{
-    max-height: 160px
-  }
-  & h2{
-    font-weight: inherit;
-  }
-
-  & .mdl-chip{
-    margin-right: 8px;
-  }
-
-  & p{
-    margin: 7px 0 16px;
-  }
-
-
-}
 
 .mdl-card{
   min-height: auto
+}
+
+.mdl-layout__header .mdl-layout__drawer-button{
+  background-color: rgba(62, 116, 148, 0.6784313725490196);
 }

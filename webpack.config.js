@@ -19,6 +19,10 @@ module.exports = {
     appStyles: [
       './app.scss'
     ],
+    vendor: [
+      'react',
+      'react-dom'
+    ]
   },
 
   output: {
@@ -53,6 +57,7 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
+        //exclude: path.join(basePath, 'src/components/'),
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -61,6 +66,28 @@ module.exports = {
           ]
         }),
       },
+
+      // {
+      //   test: /\.scss$/,
+      //   include: path.join(basePath, 'src/components/'),
+      //   exclude: /node_modules/,
+      //   use: ExtractTextPlugin.extract({
+      //   fallback: 'style-loader',
+      //     use: [
+      //       {
+      //         loader: 'css-loader',
+      //         options: {
+      //           modules: true,
+      //           sourceMap: true,
+      //           // importLoaders: 2,
+      //           localIdentName: '[name]__[local]___[hash:base64:5]',
+      //           camelCase: true,
+      //         }
+      //       },
+      //     'sass-loader'
+      //     ]
+      //   })
+      // },
 
       {
         test: /\.css$/,
@@ -117,6 +144,10 @@ module.exports = {
 
     new CopyWebpackPlugin([
       { from: './images/*.*', to: 'images/', flatten: true }
-    ])
+    ]),
+
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest'],
+    }),
   ]
 }

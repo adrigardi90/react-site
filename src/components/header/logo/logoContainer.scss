@@ -1,0 +1,38 @@
+.portolio_logo_container {
+    padding-top: 25px;
+    & a {
+        margin: 0 10px 0 10px;
+    }
+    & .portfolio_logo {
+        background: url(./../../../images/me.jpg) 50% no-repeat;
+        background-size: cover;
+        height: 120px;
+        width: 120px;
+        margin: auto auto 10px;
+        border-radius: 30%;
+        box-shadow: 0px 1px 10px 0px black;
+    }
+    & .portfol¡o_social_container {
+        display: flex
+    }
+}
+
+@mixin logo($image) {
+    background: url($image) 50% no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    margin: auto auto 10px;
+}
+
+.portfolio_logo_twitter {
+    @include logo('./../../../images/twitter.png')
+}
+
+.portfolio_logo_github {
+    @include logo('./../../../images/gh.png')
+}
+
+.portfolio_logo_linkedin {
+    @include logo('./../../../images/in.png')
+}

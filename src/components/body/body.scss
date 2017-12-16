@@ -1,0 +1,11 @@
+.portfolio_body {
+    background-image: url(./../../images/arq4.png);
+    height: -webkit-fill-available;
+    font-family: fantasy;
+    font-size: 16px;
+
+    >div {
+        text-align: center;
+        margin: 4em 0 1em 0;
+    }
+}
