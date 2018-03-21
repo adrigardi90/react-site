@@ -9,7 +9,7 @@ interface Props {
     style: string;
 }
 
-const hideMobileMenu = (style: string) => (event) => {
+const hideMobileMenu = (style: string, index: number) => (event) => {
 
     const el = document.getElementsByClassName(style);
     filter(el, (el) => el.classList.remove('active'));
@@ -22,6 +22,14 @@ const hideMobileMenu = (style: string) => (event) => {
 
     const ele3 = document.getElementsByClassName('mdl-layout__obfuscator is-visible')
     ele3.length != 0 ? ele3[0].classList.remove('is-visible') : ele3
+
+    const ele4 = document.getElementsByClassName('mdl-navigation__link');
+    filter(ele4, (el) => el.classList.remove('active'));
+    ele4[index].classList.add('active')
+
+    const ele5 = document.getElementsByClassName('mdl-layout__tab');
+    filter(ele5, (el) => el.classList.remove('active'));
+    ele5[index].classList.add('active')
 }
 
 export const Menu = (props: Props) => (
@@ -33,7 +41,7 @@ export const Menu = (props: Props) => (
                     to={route.path}
                     key={i}
                     className={props.style}
-                    onClick={hideMobileMenu(props.style)}>{route.name}</Link>
+                    onClick={hideMobileMenu(props.style, i)}>{route.name}</Link>
             ))
         }
     </nav>
