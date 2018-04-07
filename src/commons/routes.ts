@@ -6,7 +6,7 @@ export interface RouteType {
 
 export const Routes: Array<RouteType> = [
     {
-        name: 'About Me', 
+        name: 'About', 
         path: '/'
     },
 
@@ -16,7 +16,12 @@ export const Routes: Array<RouteType> = [
     },
 
     {
-        name: 'Skills', 
+        name: 'Aptitudes', 
         path: '/aptitudes'
+    },
+
+    {
+        name: 'Contact', 
+        path: '/contact'
     }
 ]

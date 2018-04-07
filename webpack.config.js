@@ -42,7 +42,15 @@ module.exports = {
 
   module: {
     rules: [
-
+      {
+        test: /\.csv$/,
+        loader: 'csv-loader',
+        options: {
+          // dynamicTyping: true,
+          // header: true,
+          // skipEmptyLines: true
+        }
+      },
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
@@ -143,7 +151,8 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([
-      { from: './images/*.*', to: 'images/', flatten: true }
+      { from: './images/*.*', to: 'images/', flatten: true },
+      {from : './static/*.*' }
     ]),
 
     new webpack.optimize.CommonsChunkPlugin({

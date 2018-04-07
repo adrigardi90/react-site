@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --inline",
     "build": "webpack",
-    "build:server": "node server/server.js"
+    "serve":"node server/server.js",
+    "build:server": "npm run build && npm run serve"
   },
   "author": "",
   "license": "ISC",
@@ -46,6 +47,8 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "csv-loader": "^2.1.1",
+    "d3": "^5.0.0",
     "react": "^16.0.0"
   }
 }

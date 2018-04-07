@@ -1,7 +1,8 @@
 .portfolio_header {
     background-image: url(./../../images/bg4.jpg);
-    //background-color: rgba(0, 0, 0, 0.34); // padding-top: 25px;
+    position: absolute;
     color: black;
+
     & a {
         color: black
     }
@@ -15,4 +16,12 @@
             margin: 0 auto;
         }
     }
+}
+
+.mdl-layout__drawer.is-visible {
+    position: absolute;
+}
+
+.mdl-layout__header{
+    background-color: rgba(63, 81, 181, 0.22);
 }

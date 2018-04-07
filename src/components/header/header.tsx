@@ -9,7 +9,7 @@ import { LogoContainer } from './logo/logoContainer';
 import './header.scss';
 
 export const Header = () => (
-    <header className="mdl-layout__header portfolio_header mdl-layout__header--scroll" >
+    <header className="mdl-layout__header mdl-layout__header--waterfall portfolio_header dl-layout__header--scroll" >
 
         <LogoContainer
             style="mdl-layout--large-screen-only" />

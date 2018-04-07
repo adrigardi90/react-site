@@ -3,6 +3,12 @@
     height: -webkit-fill-available;
     font-family: fantasy;
     font-size: 16px;
+    position: absolute;
+
+    @media (min-width: 1025px) { 
+        position: relative; 
+        padding-top:220px;
+    } 
 
     >div {
         text-align: center;

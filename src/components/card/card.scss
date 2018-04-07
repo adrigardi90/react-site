@@ -4,8 +4,11 @@
     & .img-container {
         margin: 0px;
         text-align: center;
-        display: flex;
         align-items: center; //width: 30%
+
+        @media screen and (min-width:840) {
+            display: flex;
+          }
 
         >img {
             max-height: 160px

@@ -36,3 +36,11 @@
 .portfolio_logo_linkedin {
     @include logo('./../../../images/in.png')
 }
+
+.is-compact .portfolio_logo {
+    display: none;
+}
+
+.is-compact .portfol¡o_social_container{
+    margin-top: -15px;
+}

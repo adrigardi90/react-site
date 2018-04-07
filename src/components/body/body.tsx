@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import './body.scss';
 
 export const Body: React.StatelessComponent<{}> = (props) => (
-    <div className="portfolio_body">
+    <main className="mdl-layout__content portfolio_body">
         <div>
             <main className="mdl-layout__content">
                 <Switch>
@@ -12,5 +12,5 @@ export const Body: React.StatelessComponent<{}> = (props) => (
                 </Switch>
             </main>
         </div>
-    </div>
+    </main>
 );
