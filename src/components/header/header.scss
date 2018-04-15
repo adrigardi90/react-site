@@ -1,7 +1,11 @@
 .portfolio_header {
-    background-image: url(./../../images/bg4.jpg);
+    background-image: url(./../../images/imagen5.jpg);
     position: absolute;
     color: black;
+
+    @media (min-width: 1025px) { 
+        background-image: unset;
+    } 
 
     & a {
         color: black
@@ -10,7 +14,7 @@
         height: auto;
     }
     & .portfolio_nav_container {
-        background-color: rgba(0, 0, 0, 0.08);
+        //background-color: rgba(0, 0, 0, 0.08);
         & nav {
             max-width: 1000px;
             margin: 0 auto;
@@ -23,5 +27,6 @@
 }
 
 .mdl-layout__header{
-    background-color: rgba(63, 81, 181, 0.22);
+    background-color: transparent;
+   // background-color: rgba(63, 81, 181, 0.22);
 }

@@ -1,7 +1,27 @@
 .portolio_logo_container {
+    
+    background-size: 100%;
     padding-top: 25px;
+
+    @media (min-width: 1025px) { 
+        background-image: url(./../../../images/imagen5.jpg);
+    } 
+
     & a {
         margin: 0 10px 0 10px;
+
+        & div{
+            cursor: pointer;
+
+            &:hover{
+                -webkit-transform:scale(1.25);
+                -moz-transform:scale(1.25);
+                -ms-transform:scale(1.25);
+                -o-transform:scale(1.25);
+                transform:scale(1.25);
+            }
+            
+        }
     }
     & .portfolio_logo {
         background: url(./../../../images/me.jpg) 50% no-repeat;
