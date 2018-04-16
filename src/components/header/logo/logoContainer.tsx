@@ -13,17 +13,21 @@ export const LogoContainer = (props: Props) => {
 
     return (
         <div className={style}>
-            <div className="portfolio_logo"></div>
+            
+            <Link to="/">
+                <div className="portfolio_logo"></div>
+            </Link>
+            
             <div className="portfol¡o_social_container">
                 <div className="content-grid mdl-grid">
                     <a>
-                        <div className="portfolio_logo_twitter"></div>
+                        <div id="twitter" className="portfolio_logo_twitter"></div>
                     </a>
                     <a target="_blank" href="https://github.com/adrigardi90">
-                        <div className="portfolio_logo_github"></div>
+                        <div id="github" className="portfolio_logo_github"></div>
                     </a>
                     <a href="">
-                        <div className="portfolio_logo_linkedin"></div>
+                        <div id="linkedin" className="portfolio_logo_linkedin"></div>
                     </a>
                 </div>
 

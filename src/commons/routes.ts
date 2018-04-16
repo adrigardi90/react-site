@@ -5,10 +5,10 @@ export interface RouteType {
 }
 
 export const Routes: Array<RouteType> = [
-    {
-        name: 'About', 
-        path: '/'
-    },
+    // {
+    //     name: 'About', 
+    //     path: '/'
+    // },
 
     {
         name: 'Projects',
