@@ -11,7 +11,7 @@
     & a {
         margin: 0 10px 0 10px;
 
-        & div{
+        & div[id]{
             cursor: pointer;
 
             &:hover{

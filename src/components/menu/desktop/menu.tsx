@@ -4,6 +4,8 @@ import { filter } from 'lodash';
 
 import { RouteType } from './../../../commons/routes';
 
+import './dektop.scss';
+
 interface Props {
     list: Array<RouteType>;
     style: string;
