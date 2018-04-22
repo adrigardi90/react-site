@@ -1,7 +1,8 @@
 html,
 body {
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     font-size: 18px !important;
+    max-width: 1024px;
 }
 
 @keyframes App-logo-spin {

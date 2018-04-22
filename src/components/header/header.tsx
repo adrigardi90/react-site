@@ -11,13 +11,14 @@ import './header.scss';
 export const Header = () => (
     <header className="mdl-layout__header mdl-layout__header--waterfall portfolio_header dl-layout__header--scroll" >
 
-        <LogoContainer
-            style="mdl-layout--large-screen-only" />
-
         <div className="portfolio_nav_container mdl-layout--large-screen-only">
             <Menu
                 list={Routes}
                 style="mdl-layout__tab" />
         </div>
+        <LogoContainer
+            style="mdl-layout--large-screen-only" />
+
+
     </header>
 );
