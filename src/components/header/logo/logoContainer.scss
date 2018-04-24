@@ -1,28 +1,26 @@
-.portolio_logo_container {
-    
+.logo-container {
     background-size: 100%;
     padding-top: 6px;
-    
-
-    @media (min-width: 1025px) { 
+    @media (min-width: 1025px) {
         //background-image: url(./../../../images/imagen5.jpg);
-    } 
-
+    }
     & a {
         margin: 0 10px 0 10px;
-
-        & div[id]{
+        & div[id] {
             cursor: pointer;
-
-            &:hover{
-                -webkit-transform:scale(1.25);
-                -moz-transform:scale(1.25);
-                -ms-transform:scale(1.25);
-                -o-transform:scale(1.25);
-                transform:scale(1.25);
+            &:hover {
+                -webkit-transform: scale(1.25);
+                -moz-transform: scale(1.25);
+                -ms-transform: scale(1.25);
+                -o-transform: scale(1.25);
+                transform: scale(1.25);
             }
-            
         }
+    }
+    &__profile {
+        position: relative;
+        width: 100px;
+        margin: 0 auto;
     }
     & .portfolio_logo {
         background: url(./../../../images/me.jpg) 50% no-repeat;
@@ -32,10 +30,17 @@
         margin: auto auto 10px;
         border-radius: 30%;
         box-shadow: 0px 1px 10px 0px black;
+
+        &:hover{
+            box-shadow:  0px 1px 10px 1px black;
+        }
     }
     & .portfol¡o_social_container {
         display: flex;
         margin-top: -17px;
+        & div:first-child {
+            z-index: 2;
+        }
     }
 }
 
@@ -63,6 +68,6 @@
     display: none;
 }
 
-.is-compact .portfol¡o_social_container{
+.is-compact .portfol¡o_social_container {
     margin-top: -15px;
 }

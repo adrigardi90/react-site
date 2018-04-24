@@ -10,13 +10,13 @@ export const Description = () => (
         <div className="description__challenges">
             <div className="description-section">
                 <h1>Always looking for new challenges</h1>
-                <p>Building and creating new products from scratch is something really exciting you can not avoid once you've tried it </p>
+                <p>Building new products from scratch with the right solution is something really exciting you cannot stop doing it once you've tried it </p>
             </div>
         </div>
 
         <div className="description__team">
             <div className="description-section">
-                <h3>Teamwork as a value</h3>
+                <h3>Working as a team</h3>
                 <p> Working in a healthy atmosphere promoting the cooperation</p>
                 <div className="mdl-grid description__team__list">
                     <div className="mdl-cell mdl-cell--4-col">
