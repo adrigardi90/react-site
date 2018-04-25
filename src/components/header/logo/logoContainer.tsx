@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { filter } from 'lodash';
 
 import './logoContainer.scss';
 
@@ -8,7 +9,18 @@ interface Props {
 }
 
 const removeMenuStyle = (event) => {
-    console.log("event")
+    const nav = document.getElementsByClassName('mdl-layout__tab');
+    filter(nav, (el) => el.classList.remove('active'));
+
+    const navMobile = document.getElementsByClassName('mdl-navigation__link');
+    filter(navMobile, (el) => el.classList.remove('active'));
+
+    const ele2 = document.getElementById('menuMobile');
+    ele2.setAttribute('aria-hidden', 'true')
+    ele2.classList.remove('is-visible')
+
+    const ele3 = document.getElementsByClassName('mdl-layout__obfuscator is-visible')
+    ele3.length != 0 ? ele3[0].classList.remove('is-visible') : ele3
 }
 
 export const LogoContainer = (props: Props) => {

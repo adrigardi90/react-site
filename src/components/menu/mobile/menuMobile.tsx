@@ -6,9 +6,13 @@ import { LogoContainer } from './../../header/logo/logoContainer';
 import './menuMobile.scss';
 
 export const MenuMobile = () => (
-    <div id="menuMobile" className="mdl-layout__drawer mdl-layout--small-screen-only menu-mobile">
+    <div 
+        id="menuMobile" 
+        className="mdl-layout__drawer mdl-layout--small-screen-only menu-mobile">
+        
         <LogoContainer style="mdl-layout--small-screen-only" />
-        <Menu list={Routes}
+        <Menu 
+            list={Routes}
             style="mdl-navigation__link" />
     </div>
 );
