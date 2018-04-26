@@ -2,7 +2,7 @@
     background-size: 100%;
     padding-top: 6px;
     @media (min-width: 1025px) {
-        //background-image: url(./../../../images/imagen5.jpg);
+
     }
     & a {
         margin: 0 10px 0 10px;
@@ -64,10 +64,10 @@
     @include logo('./../../../images/in.png')
 }
 
-.is-compact .portfolio_logo {
+.is-compact .logo-container__profile {
     display: none;
 }
 
 .is-compact .portfol¡o_social_container {
-    margin-top: -15px;
+    margin-top: 1px;
 }

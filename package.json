@@ -4,10 +4,11 @@
   "description": "Sample working with React,TypeScript and Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline",
-    "build": "webpack",
-    "serve":"node server/server.js",
-    "build:server": "npm run build && npm run serve"
+    "start": "webpack-dev-server --env=dev --hot --inline --port 8080",
+    "build:dev": "webpack --env=dev",
+    "build:pro": "webpack --env=prod",
+    "run:dev": "npm run build:dev && npm run serve",
+    "serve":"node server/server.js"
   },
   "author": "",
   "license": "ISC",

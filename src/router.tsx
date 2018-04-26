@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Provider } from 'react-redux'
 
 import * as Pages from './pages';
 import { App } from './app';
