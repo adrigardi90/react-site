@@ -8,7 +8,8 @@
     "build:dev": "webpack --env=dev",
     "build:pro": "webpack --env=prod",
     "run:dev": "npm run build:dev && npm run serve",
-    "serve":"node server/server.js"
+    "run:pro": "npm run build:pro && npm run serve",
+    "serve": "node server/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -45,7 +46,8 @@
     "typescript": "^2.0.6",
     "url-loader": "^0.5.7",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.2"
   },
   "dependencies": {
     "csv-loader": "^2.1.1",
