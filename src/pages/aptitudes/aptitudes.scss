@@ -1,0 +1,42 @@
+.aptitudes{
+    &>div {
+        &:first-child {
+            background-image: linear-gradient(0deg, #f6f8f9 3%, #fff);
+        }
+        &:nth-child(2n+1) {
+            background-color: #f6f8f9;
+        }
+    }
+
+    &-section{
+        //width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: justify;
+        text-align: center;
+        @media screen and (min-width: 900px) {
+            max-width: 1200px;
+        }
+    }
+
+    &__summary{
+        padding: 4rem 0 10rem 0;
+    }
+
+    &__front{
+        padding: 4rem 0 10rem 0;
+    }
+
+    &__back{
+        padding: 4rem 0 10rem 0;
+    }
+
+    &__devops{
+        padding: 4rem 0 10rem 0;
+    }
+
+}
+
+.mdl-cell {
+    //margin: 4% !important;
+}

@@ -1,0 +1,32 @@
+.aptitude-card {
+    border: 1px solid #dedede;
+    margin: 24px 12px 12px;
+    margin-bottom: 24px;
+    height: 270px; //width: 100%;
+    cursor: pointer;
+    &__title {
+        text-align: center;
+        & h3 {
+            font-weight: 400;
+            font-size: 20px;
+            color: #646f79;
+            margin: 24px 0 20px 0;
+        }
+    }
+    &__icon {
+        margin-bottom: 15px;
+        & img {
+            width: 96px;
+        }
+    }
+    &__description {
+        & p {
+            font-size: 14px;
+            color: #888686;
+        }
+    }
+    &:hover {
+        border-color: #c5c5c5;
+        box-shadow: 2px 2px 8px 0px #c5c5c5;
+    }
+}

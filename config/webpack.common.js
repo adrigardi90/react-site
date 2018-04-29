@@ -127,7 +127,7 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([{
-      from: './static/*.*'
+      from: './images/*.*'
     }]),
   ]
 }

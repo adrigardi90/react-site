@@ -13,7 +13,7 @@ export const Card = (props: Props) => (
         <div className="mdl-cell--12-col-tablet mdl-cell--12-col-phone img-container center-align">
             <img
                 className="article-image"
-                src={require(`./../../images/${props.img}`)} />
+                src={require(`./../../../images/${props.img}`)} />
         </div>
         <div className="mdl-cell mdl-cell--8-col">
 

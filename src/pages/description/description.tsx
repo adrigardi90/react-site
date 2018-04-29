@@ -18,7 +18,7 @@ export const Description = () => (
             <div className="description-section">
                 <h3>Working as a team</h3>
                 <p> Working in a healthy atmosphere promoting the cooperation</p>
-                <div className="mdl-grid description__team__list">
+                <div className="mdl-grid mdl-grid--spacing description__team__list">
                     <div className="mdl-cell mdl-cell--4-col">
                         <div>
                             <img src="./../../images/smile.png" alt="" />
@@ -48,7 +48,7 @@ export const Description = () => (
             </div>
         </div>
 
-        <div >
+        <div>
             <div className="description-section">
                 <h3>Working as a team is the key to success</h3>
             </div>
