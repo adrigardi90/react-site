@@ -47,12 +47,5 @@ export const Description = () => (
                 <p>Trying to find any opportunity to learn something new and innovative</p>
             </div>
         </div>
-
-        <div>
-            <div className="description-section">
-                <h3>Working as a team is the key to success</h3>
-            </div>
-        </div>
-
     </section>
 );

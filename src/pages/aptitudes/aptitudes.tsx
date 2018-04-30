@@ -5,26 +5,29 @@ import { dataAptitudes } from './../../commons/dataAptitudes';
 
 import './aptitudes.scss';
 
-const scrollToSection = () => {
-    console.log('aaa')
+const scrollToSection = (tag: string) => () => {
     var elmnt = document.getElementById("back").offsetTop;
-    console.log(elmnt)
-    document.getElementById('portfolio-body').scrollTop = elmnt + 125 - 10;
+    document.querySelector(`#${tag}`).scrollIntoView({
+        behavior: 'smooth'
+    });
 }
+
 export const Aptitudes = () => (
     <section className="mdl-layout__tab-panel is-active aptitudes">
 
         <div className="aptitudes__summary">
+            <h2>Technology stack overview</h2>
+
             <div className="mdl-grid aptitudes-section">
                 {
                     dataAptitudes.map((apt: any) => (
                         <div className="mdl-cell" id="#/">
-                            <AptitudeCard 
+                            <AptitudeCard
                                 key={apt.i}
                                 title={apt.title}
                                 icon={apt.icon}
                                 description={apt.description}
-                                click={scrollToSection}/>
+                                click={scrollToSection(apt.tag)} />
                         </div>
                     ))
                 }
@@ -32,7 +35,18 @@ export const Aptitudes = () => (
         </div>
         <div className="aptitudes__front" id="front">
             <div className="aptitudes-section">
-                front
+
+                JS, TS, HTML 5
+                <h3>Libraries - Frameworks</h3>
+                <p>Angular, React, Redux</p>
+
+                <h3>Styling</h3>
+
+                Responsive design image
+                <p>css, sass, Bootstrap, Material, Foundation</p>
+
+                <h3>BUndleing</h3>
+                <p>Webpack, grunt</p>
             </div>
         </div>
 

@@ -1,4 +1,4 @@
-.aptitudes{
+.aptitudes {
     &>div {
         &:first-child {
             background-image: linear-gradient(0deg, #f6f8f9 3%, #fff);
@@ -7,8 +7,7 @@
             background-color: #f6f8f9;
         }
     }
-
-    &-section{
+    &-section {
         //width: 100%;
         justify-content: center;
         margin: 0 auto;
@@ -18,23 +17,26 @@
             max-width: 1200px;
         }
     }
-
-    &__summary{
+    &__summary {
         padding: 4rem 0 10rem 0;
-    }
 
-    &__front{
-        padding: 4rem 0 10rem 0;
+        & h2 {
+            font-weight: 200;
+            font-size: 34px;
+            color: #161d28;
+            margin: 0 0 40px 0;
+        }
     }
-
-    &__back{
-        padding: 4rem 0 10rem 0;
+    &__front {
+        padding: 15rem 0 15rem 0;
     }
-
-    &__devops{
-        padding: 4rem 0 10rem 0;
+    &__back {
+        padding: 15rem 0 15rem 0;
+        background-image: url(./../../images/mix.png);
     }
-
+    &__devops {
+        padding: 15rem 0 15rem 0;
+    }
 }
 
 .mdl-cell {
