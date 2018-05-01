@@ -16,15 +16,44 @@
         @media screen and (min-width: 900px) {
             max-width: 1200px;
         }
+
+        &__card::before{
+
+            border-radius: 3px 3px 0 0;
+            content: "";
+            display: block;
+            height: 6px;
+        }
+
+        & div:first-child::before{
+            background: linear-gradient(90deg,#3be8b0 0,#02ceff);
+        }
+
+        & div:nth-child(2)::before{
+            background: linear-gradient(90deg,#02ceff 0,#a177ff);
+        }
+        & div:nth-child(3)::before{
+            background: linear-gradient(90deg,#a177ff 0,#fc636b);
+        }
     }
     &__summary {
-        padding: 4rem 0 10rem 0;
-
+        padding: 2rem 0 10rem 0;
         & h2 {
-            font-weight: 200;
-            font-size: 34px;
+            font-weight: 300;
+            //font-size: 34px;
             color: #161d28;
-            margin: 0 0 40px 0;
+            //margin: 0 0 40px 0;
+        }
+
+        & > p{
+            font-size: 1.375rem;
+            line-height: 1.636;
+            max-width: 800px;
+            font-family: sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: #646f79;
+            margin: 0 auto;
+            margin-bottom: 5rem;
         }
     }
     &__front {
