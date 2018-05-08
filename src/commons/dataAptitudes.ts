@@ -20,4 +20,40 @@ export const dataAptitudes = [
         tag: 'devops',
         description: 'Simple game using canvas API with Html5, Css and Javascript',
     },
-]
+];
+
+export const frontEnd = {
+    basic : [
+        {
+            name: "javascript",
+            icon: 'js.png'
+        },
+        {
+            name: "javascript",
+            icon: 'ts.png'
+        },
+        {
+            name: "javascript",
+            icon: 'html.png'
+        },
+        {
+            name: "javascript",
+            icon: 'css.png'
+        }
+    ],
+
+    libraries : [
+        {
+            name: "javascript",
+            icon: 'angular.png'
+        },
+        {
+            name: "javascript",
+            icon: 'react.png'
+        },
+        {
+            name: "javascript",
+            icon: 'redux.png'
+        }
+    ]
+}
