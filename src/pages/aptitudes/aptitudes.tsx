@@ -1,12 +1,11 @@
 import * as React from 'react';
 
 import { AptitudeCard } from './../../components/card/aptitude/aptitude-card';
-import { dataAptitudes, frontEnd } from './../../commons/dataAptitudes';
+import { dataAptitudes, frontEnd, backEnd } from './../../commons/dataAptitudes';
 
 import './aptitudes.scss';
 
 const scrollToSection = (tag: string) => () => {
-    var elmnt = document.getElementById("back").offsetTop;
     document.querySelector(`#${tag}`).scrollIntoView({
         behavior: 'smooth'
     });
@@ -37,7 +36,7 @@ export const Aptitudes = () => (
         <div className="aptitudes__front" id="front">
             <div className="aptitudes-section">
 
-                <div className="mdl-grid mdl-grid--spacing aptitudes-section__basics">
+                <div className="mdl-grid mdl-grid--spacing aptitudes__front__basics">
                     {
                         frontEnd.basic.map((item) => (
                             <div className="mdl-cell mdl-cell--2-col">
@@ -49,9 +48,9 @@ export const Aptitudes = () => (
                     }
                 </div>
 
-                <div className="aptitudes-section__libraries">
+                <div className="aptitudes__front__libraries">
 
-                    <h3>Libraries - Frameworks</h3>
+                    <h3 className="aptitudes__title">Libraries - Frameworks</h3>
 
                     <div className="mdl-grid mdl-grid--spacing">
                         {
@@ -67,29 +66,101 @@ export const Aptitudes = () => (
 
                 </div>
 
-                <div className="aptitudes-section__styling">
+                <div className="aptitudes__front__styling">
 
-                    <h3>Styles - User Interface</h3>
-                    <p>Responsive design with mobile first</p>
+                    <h3 className="aptitudes__title">Styles - User Interface</h3>
+                    <p className="aptitudes__subtitle">Responsive design with mobile first</p>
 
+                    <div className="mdl-grid mdl-grid--spacing">
+                        {
+                            frontEnd.styles.map((item) => (
+                                <div className="mdl-cell mdl-cell--2-col">
+                                    <div>
+                                        <img src={`../../images/` + item.icon} alt="" id={item.name} />
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
 
+                <div className="aptitudes__front__bundling">
 
+                    <h3 className="aptitudes__title">Bundling and packaging</h3>
+                    <p className="aptitudes__subtitle">Optimize the output for usage in a browser</p>
 
-
-                Responsive design image
-                <p>css, sass, Bootstrap, Material, Foundation</p>
-
-                <h3>BUndleing</h3>
-                <p>Webpack, grunt</p>
+                    <div className="mdl-grid mdl-grid--spacing">
+                        {
+                            frontEnd.bundling.map((item) => (
+                                <div className="mdl-cell mdl-cell--2-col">
+                                    <div>
+                                        <img src={`../../images/` + item.icon} alt="" id={item.name} />
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
 
             </div>
         </div>
 
+        <div className="aptitudes__separator" id="separator">
+
+        </div>
+
         <div className="aptitudes__back" id="back">
             <div className="aptitudes-section">
-                back
+                <div className="mdl-grid mdl-grid--spacing aptitudes__back__basics">
+                    {
+                        backEnd.basic.map((item) => (
+                            <div className="mdl-cell mdl-cell--2-col">
+                                <div>
+                                    <img src={`../../images/` + item.icon} alt="" id={item.name} />
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
+
+                <div className="aptitudes__back__libraries">
+
+                    <h3 className="aptitudes__title">Libraries </h3>
+
+                    <div className="mdl-grid mdl-grid--spacing">
+                        {
+                            backEnd.libraries.map((item) => (
+                                <div className="mdl-cell mdl-cell--2-col">
+                                    <div>
+                                        <img src={`../../images/` + item.icon} alt="" id={item.name} />
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+
+                </div>
+
+                <div className="aptitudes__back__databases">
+
+                    <h3 className="aptitudes__title">Databases </h3>
+                    <p className="aptitudes__subtitle">Databases NOSQL</p>
+
+                    <div className="mdl-grid mdl-grid--spacing">
+                        {
+                            backEnd.databases.map((item) => (
+                                <div className="mdl-cell mdl-cell--2-col">
+                                    <div>
+                                        <img src={`../../images/` + item.icon} alt="" id={item.name} />
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
         <div className="aptitudes__devops" id="devops">

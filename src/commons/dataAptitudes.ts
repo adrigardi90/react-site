@@ -29,31 +29,89 @@ export const frontEnd = {
             icon: 'js.png'
         },
         {
-            name: "javascript",
+            name: "typescript",
             icon: 'ts.png'
         },
         {
-            name: "javascript",
+            name: "html",
             icon: 'html.png'
         },
         {
-            name: "javascript",
+            name: "css",
             icon: 'css.png'
         }
     ],
 
     libraries : [
         {
-            name: "javascript",
+            name: "angular",
             icon: 'angular.png'
         },
         {
-            name: "javascript",
+            name: "react",
             icon: 'react.png'
         },
         {
-            name: "javascript",
+            name: "redux",
             icon: 'redux.png'
         }
+    ],
+
+    styles : [
+        {
+            name: "sass",
+            icon: 'sass.png'
+        },
+        {
+            name: "bootstrap",
+            icon: 'bootstrap.png'
+        },
+        {
+            name: "material",
+            icon: 'material.png'
+        },
+        {
+            name: "fountaion",
+            icon: 'foundation.png'
+        },
+    ],
+    bundling: [
+        {
+            name: "webpack",
+            icon: 'webpack.png'
+        },
+        {
+            name: "grunt",
+            icon: 'grunt.png'
+        },
+        {
+            name: "yo",
+            icon: 'yo.png'
+        },
+    ]
+}
+
+export const backEnd = {
+    basic: [
+        {
+            name: "node",
+            icon: 'node.png'
+        },
+        {
+            name: "express",
+            icon: 'express.png'
+        },
+    ],
+    libraries: [
+        {
+            name: "socket",
+            icon: 'socket.png'
+        },
+    ],
+    databases: [
+        {
+            name: "mongo",
+            icon: 'mongo.png'
+        },
     ]
 }

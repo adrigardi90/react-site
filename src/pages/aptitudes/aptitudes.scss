@@ -7,6 +7,21 @@
             background-color: #f6f8f9;
         }
     }
+    &__title {
+        font-weight: 300;
+        color: #161d28;
+        font-size: 45px;
+    }
+    &__subtitle {
+        font-size: 1.375rem;
+        line-height: 1.636;
+        max-width: 800px;
+        font-family: sans-serif;
+        -webkit-font-smoothing: antialiased;
+        color: #646f79;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
     &-section {
         //width: 100%;
         justify-content: center;
@@ -31,6 +46,16 @@
         & div:nth-child(3)::before {
             background: linear-gradient(90deg, #a177ff 0, #fc636b);
         }
+    }
+    &__summary {
+        padding: 2rem 0 10rem 0;
+        & h2 {
+            font-weight: 300; //font-size: 34px;
+            color: #161d28; //margin: 0 0 40px 0;
+        }
+    }
+    &__front {
+        margin: 11rem 0 10rem 0;
         &__basics {
             justify-content: center;
             margin-bottom: 6rem;
@@ -39,13 +64,8 @@
             }
         }
         &__libraries {
-            & h3 {
-                font-weight: 300;
-                color: #161d28;
-                font-size: 45px;
-            }
             &>div {
-                margin: 4rem 0 4rem 0;
+                margin: 4rem 0 7rem 0;
                 justify-content: center;
             }
             & img {
@@ -53,46 +73,57 @@
             }
         }
         &__styling {
-            & h3 {
-                font-weight: 300;
-                color: #161d28;
-                font-size: 45px;
+            &>div {
+                margin: 4rem 0 7rem 0;
+                justify-content: center;
             }
-            & p {
-                font-size: 1.375rem;
-                line-height: 1.636;
-                max-width: 800px;
-                font-family: sans-serif;
-                -webkit-font-smoothing: antialiased;
-                color: #646f79;
-                margin: 0 auto;
-                margin-bottom: 3rem;
+            & img {
+                width: 99px;
+            }
+        }
+        &__bundling {
+            &>div {
+                margin: 4rem 0 7rem 0;
+                justify-content: center;
+            }
+            & img {
+                width: 95px;
             }
         }
     }
-    &__summary {
-        padding: 2rem 0 10rem 0;
-        & h2 {
-            font-weight: 300; //font-size: 34px;
-            color: #161d28; //margin: 0 0 40px 0;
-        }
-        &>p {
-            font-size: 1.375rem;
-            line-height: 1.636;
-            max-width: 800px;
-            font-family: sans-serif;
-            -webkit-font-smoothing: antialiased;
-            color: #646f79;
-            margin: 0 auto;
-            margin-bottom: 5rem;
-        }
-    }
-    &__front {
-        padding: 11rem 0 15rem 0;
+    &__separator {
+        background-image: url(./../../images/mix2.png);
+        padding: 15rem 0 15rem 0;
     }
     &__back {
         padding: 15rem 0 15rem 0;
-        background-image: url(./../../images/mix.png);
+        &__basics {
+            justify-content: center;
+            margin-bottom: 6rem;
+            & img {
+                width: 150px;
+            }
+        }
+        &__libraries {
+            justify-content: center;
+            &>div {
+                margin: 4rem 0 7rem 0;
+                justify-content: center;
+            }
+            & img {
+                width: 150px;
+            }
+        }
+        &__databases {
+            justify-content: center;
+            &>div {
+                margin: 4rem 0 7rem 0;
+                justify-content: center;
+            }
+            & img {
+                width: 110px;
+            }
+        }
     }
     &__devops {
         padding: 15rem 0 15rem 0;
@@ -101,4 +132,5 @@
 
 .mdl-cell {
     //margin: 4% !important;
+    align-self: center;
 }
