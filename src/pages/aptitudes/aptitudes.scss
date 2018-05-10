@@ -55,7 +55,7 @@
         }
     }
     &__front {
-        margin: 11rem 0 10rem 0;
+        margin: 15rem 0 13rem 0;
         &__basics {
             justify-content: center;
             margin-bottom: 6rem;
@@ -96,7 +96,7 @@
         padding: 15rem 0 15rem 0;
     }
     &__back {
-        padding: 15rem 0 15rem 0;
+        padding: 12rem 0 9rem 0;
         &__basics {
             justify-content: center;
             margin-bottom: 6rem;
@@ -126,7 +126,24 @@
         }
     }
     &__devops {
-        padding: 15rem 0 15rem 0;
+        padding: 15rem 0 8rem 0;
+        &__basics {
+            justify-content: center;
+            margin-bottom: 6rem;
+            & img {
+                width: 150px;
+            }
+        }
+        &__cloud {
+            margin-bottom: 6rem;
+            &>div {
+                margin: 4rem 0 4rem 0;
+                justify-content: center;
+            }
+            & img {
+                width: 150px;
+            }
+        }
     }
 }
 

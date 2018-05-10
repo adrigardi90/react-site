@@ -115,3 +115,30 @@ export const backEnd = {
         },
     ]
 }
+
+export const devops = {
+    basic: [
+        {
+            name: "docker",
+            icon: 'docker.png'
+        },
+        {
+            name: "jenkins",
+            icon: 'jenkins.png'
+        },
+    ],
+    cloud: [
+        {
+            name: "aws",
+            icon: 'amazon.png'
+        },
+        {
+            name: "azure",
+            icon: 'azure.png'
+        },
+        {
+            name: "heroku",
+            icon: 'heroku.png'
+        },
+    ]
+}
