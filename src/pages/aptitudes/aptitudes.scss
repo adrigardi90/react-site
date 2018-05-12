@@ -94,6 +94,10 @@
     &__separator {
         background-image: url(./../../images/mix2.png);
         padding: 15rem 0 15rem 0;
+        &-two{
+            background-image: url(./../../images/cloud2.jpg);
+            padding: 15rem 0 15rem 0; 
+        }
     }
     &__back {
         padding: 12rem 0 9rem 0;

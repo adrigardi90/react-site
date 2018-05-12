@@ -10,10 +10,10 @@ export const Routes: Array<RouteType> = [
     //     path: '/'
     // },
 
-    {
-        name: 'Projects',
-        path: '/projects'
-    },
+    // {
+    //     name: 'Projects',
+    //     path: '/projects'
+    // },
 
     {
         name: 'Aptitudes', 

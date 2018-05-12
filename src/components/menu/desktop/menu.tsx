@@ -31,7 +31,11 @@ const hideMobileMenu = (style: string, index: number) => (event) => {
 
     const ele5 = document.getElementsByClassName('mdl-layout__tab');
     filter(ele5, (el) => el.classList.remove('active'));
-    ele5[index].classList.add('active')
+    ele5[index].classList.add('active');
+
+    const header = document.getElementById('header');
+    header.classList.remove('is-casting-shadow');
+    document.querySelector(`#portfolio-body`).scrollTo(0,0);
 }
 
 export const Menu = (props: Props) => (

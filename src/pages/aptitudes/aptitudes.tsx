@@ -144,7 +144,7 @@ export const Aptitudes = () => (
                 <div className="aptitudes__back__databases">
 
                     <h3 className="aptitudes__title">Databases </h3>
-                    <p className="aptitudes__subtitle">Databases NOSQL</p>
+                    <p className="aptitudes__subtitle">NOSQL databases</p>
 
                     <div className="mdl-grid mdl-grid--spacing">
                         {
@@ -161,6 +161,10 @@ export const Aptitudes = () => (
                 </div>
 
             </div>
+        </div>
+
+        <div className="aptitudes__separator-two" id="separator">
+
         </div>
 
         <div className="aptitudes__devops" id="devops">
