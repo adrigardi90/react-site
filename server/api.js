@@ -10,7 +10,7 @@ router.post('/sendEmail', (req, res) => {
         service: 'Hotmail',
         auth: {
             user: 'adrigar90@hotmail.com',
-            pass: 'XXXXX'
+            pass: 'Adr,uc3m1990'
         }
     });
 
@@ -26,7 +26,7 @@ router.post('/sendEmail', (req, res) => {
             console.log("error", error.message)
             res.sendStatus(500);
         } else {
-            res.status(200).send({});
+            res.status(200).send({ message: 'Success'});
         }
     });
 });

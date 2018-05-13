@@ -21,7 +21,8 @@ module.exports = {
       'react-dom',
       'lodash',
       'react-router-dom'
-    ]
+    ],
+    babel : 'babel-polyfill'
   },
 
   output: {

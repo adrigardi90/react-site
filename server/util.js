@@ -1,10 +1,10 @@
 
 
 const getMessage = (obj) => {
-    var msn= '';
+    var msn = '';
 
-    for(var ele in obj){
-        msn += obj[ele] + "\n";
+    for (var ele in obj) {
+        msn += ele.toUpperCase() + ': ' + obj[ele] + "\n";
     }
 
     return msn;

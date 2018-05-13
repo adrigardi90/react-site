@@ -8,7 +8,6 @@ export const RouterComponent = () => (
     <BrowserRouter>
         <App>
             <Route exact path="/" component={Pages.Description}></Route>
-            <Route path="/projects" component={Pages.Projects}></Route>
             <Route path="/aptitudes" component={Pages.Aptitudes}></Route>
             <Route path="/contact" component={Pages.Contact}></Route>
         </App>

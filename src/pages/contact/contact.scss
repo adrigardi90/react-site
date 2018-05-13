@@ -8,20 +8,47 @@
         text-align: left;
         color: #555555;
     }
-
-    & p{
+    & p {
         color: #555555;
         text-align: left;
         font-size: 17px;
         font-weight: 200;
         margin-bottom: 3rem;
     }
-    &__submit{
+    &__submit {
         padding-top: 30px;
         text-align: left;
+        display: flex;
+        & p {
+            font-size: 21px;
+            margin-top: 5px;
+            margin-left: 18px;
+        }
+        &-error {
+            color: #b10000;
+        }
+        &-success {
+            margin-top: 4rem;
+            & p {
+                text-align: center !important;
+                font-size: 27px !important;
+                margin-top: 2rem !important;
+            }
+            & img {
+                width: 7rem;
+            }
+        }
     }
 }
 
 .mdl-button--raised.mdl-button--colored:hover {
     background-color: rgb(46, 73, 222);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
 }

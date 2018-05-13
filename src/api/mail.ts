@@ -8,15 +8,13 @@ const post = (data: object) : Promise<{}> => (
         })
 );
 
-async function sendEmail(data: {}){
-
+async function sendEmail(data: {}): Promise<{}>{
     try {
-        const res = await post(data)
-        console.log(res)
+        const res: any = await post(data)
+        return res.status;
     } catch (error) {
-        console.log(error)
-    }
-        
+        return error;
+    }       
 }
 
 export const email = sendEmail;
