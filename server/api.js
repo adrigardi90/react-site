@@ -10,7 +10,7 @@ router.post('/sendEmail', (req, res) => {
         service: 'Hotmail',
         auth: {
             user: 'adrigar90@hotmail.com',
-            pass: 'Adr,uc3m1990'
+            pass: 'xxx'
         }
     });
 
