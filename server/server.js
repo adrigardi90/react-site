@@ -9,7 +9,6 @@ const port = 3000;
 
 const router = require('./api')
 
-//import { Router } from './api';
 
 app.use(express.static(path.join(__dirname, '../dist')));
 
@@ -19,7 +18,6 @@ app.set('port', port);
 
 
 app.get('*', (req, res) => {
-    //res.status(200).send({});
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 })
 
