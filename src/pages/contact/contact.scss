@@ -22,10 +22,12 @@
         & p {
             font-size: 21px;
             margin-top: 5px;
+            font-size: 17px;
+            font-weight: 200;
             margin-left: 18px;
         }
         &-error {
-            color: #b10000;
+            color: #b10000 !important;
         }
         &-success {
             margin-top: 4rem;

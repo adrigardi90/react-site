@@ -8,13 +8,16 @@ interface Props {
     placeholder: string;
     value: string;
     onChange: (string) => void;
+    mandatory?: boolean;
 }
 
 export const Textarea = (props: Props) => (
     <div className="custom-textarea">
 
         <label className="custom-textarea__label">
-            {props.label}
+            {props.label} {
+                props.mandatory && <span>*</span>
+            }
         </label>
 
         <div className="custom-textarea__input">

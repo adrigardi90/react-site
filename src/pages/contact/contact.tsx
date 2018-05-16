@@ -11,6 +11,7 @@ interface State {
     loading: boolean;
     error: boolean;
     submit: boolean;
+    valid: boolean;
 }
 
 const getData = (obj: any) => ({
@@ -31,97 +32,117 @@ export class Contact extends React.Component<{}, State>{
             message: '',
             loading: false,
             error: false,
-            submit: false
+            submit: false,
+            valid: true
         }
     }
 
     handleChange = (event) => {
         const target = event.target;
         this.setState({
-            [target.name]: target.value
+            [target.name]: target.value,
         })
     }
 
     handleSubmit = (event) => {
-        this.setState({ loading: !this.state.loading, error: false, submit: false })
         event.preventDefault();
-        email(getData(this.state)).then((data: any) => {
-            this.setState({ loading: !this.state.loading, submit: true })
-            data !== 200 ? this.setState({ error: true }) : null;
-        }, (error) => {
-            this.setState({ loading: !this.state.loading, error: true })
-        })
+
+        if ((this.state.name && this.state.email && this.state.message) !== '') {
+            this.setState({ loading: !this.state.loading, error: false, submit: false, valid: true })
+            email(getData(this.state)).then(this.successSubmit, this.errorSubmit)
+        } else {
+            this.setState({ valid: false, submit: false, error: false })
+        }
+    }
+
+    successSubmit = (data: any) => {
+        this.setState({ loading: !this.state.loading, submit: true })
+        data !== 200 ? this.setState({ error: true }) : null;
+    }
+
+    errorSubmit = (error) => {
+        this.setState({ loading: !this.state.loading, error: true })
     }
 
     render() {
+
+        const invalid = (this.state.name === '' || this.state.email === '' || this.state.message === '');
+
         return (
             <div className="contact">
                 {
                     !this.state.error && this.state.submit ? (
                         <div className="contact__submit-success">
-                            <img src={'../../images/message.svg'} alt=""/>
+                            <img src={'../../images/message.svg'} alt="" />
                             <p > Message sent. Thank you!</p>
                         </div>
-                        
+
                     ) : (
-                        <div>
-                            <h2>Contact me and send a message</h2>
-                            <p>Contact me and send a message</p>
-                            <form onSubmit={this.handleSubmit}>
+                            <div>
+                                <h2>Contact me and send a message</h2>
+                                <p>Contact me and send a message</p>
+                                <form onSubmit={this.handleSubmit}>
 
-                                <Input
-                                    label='Name'
-                                    name='name'
-                                    placeholder='Enter your name'
-                                    type='text'
-                                    value={this.state.name}
-                                    onChange={this.handleChange} />
+                                    <Input
+                                        label='Name'
+                                        name='name'
+                                        placeholder='Enter your name'
+                                        type='text'
+                                        mandatory
+                                        value={this.state.name}
+                                        onChange={this.handleChange} />
 
-                                <br />
+                                    <br />
 
-                                <Input
-                                    label='Email'
-                                    name='email'
-                                    placeholder='Enter your email'
-                                    type='text'
-                                    value={this.state.email}
-                                    onChange={this.handleChange} />
+                                    <Input
+                                        label='Email'
+                                        name='email'
+                                        placeholder='Enter your email'
+                                        type='text'
+                                        mandatory
+                                        value={this.state.email}
+                                        onChange={this.handleChange} />
 
-                                <br />
+                                    <br />
 
-                                <Input
-                                    label='Subject'
-                                    name='subject'
-                                    placeholder='Enter the subject'
-                                    type='text'
-                                    value={this.state.subject}
-                                    onChange={this.handleChange} />
+                                    <Input
+                                        label='Subject'
+                                        name='subject'
+                                        placeholder='Enter the subject'
+                                        type='text'
+                                        value={this.state.subject}
+                                        onChange={this.handleChange} />
 
-                                <br />
+                                    <br />
 
-                                <Textarea
-                                    label='Message'
-                                    name='message'
-                                    placeholder='Enter your message'
-                                    value={this.state.message}
-                                    onChange={this.handleChange} />
+                                    <Textarea
+                                        label='Message'
+                                        name='message'
+                                        placeholder='Enter your message'
+                                        value={this.state.message}
+                                        mandatory
+                                        onChange={this.handleChange} />
 
-                                <div className="contact__submit">
-                                    <button
-                                        className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
-                                        type="submit"
-                                        value="Submit" >
-                                        Submit
-                                    </button>
+                                    <div className="contact__submit">
+                                        <button
+                                            className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                            type="submit"
+                                            value="Submit" >
+                                            Submit
+                                        </button>
 
-                                    <p className={this.state.loading ? 'show' : 'hidden'}>Sending message ...</p>
-                                    {
-                                        this.state.error && <p className="contact__submit-error">Error sending the message! Try again</p>
-                                    }
-                                </div>
-                            </form>
-                        </div>
-                    )
+                                        <p className={this.state.loading && !invalid ? 'show' : 'hidden'}>Sending message ...</p>
+                                        {
+                                            this.state.error && <p className="contact__submit-error">Error sending the message! Try again</p>
+                                        }
+                                        {
+                                            invalid && !this.state.valid &&
+                                            <p className="contact__submit-error">Please enter the mandatories fields</p>
+                                        }
+                                    </div>
+                                </form>
+                            </div>
+                        )
                 }
             </div>
         )
