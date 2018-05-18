@@ -27,70 +27,6 @@ body {
     width: 5%
 }
 
-// .mdl-navigation {
-//   //display: none;
-//   & a {
-//     text-align: center
-//   }
-//   & a:hover{
-//     //background-color: rgba(0, 0, 0, 0.23)
-//     border-bottom: solid 2px #ff4081;
-//     //width: 80%;
-//     // content: "";
-//     // width: 80%;
-//     // height: 2px;
-//     // display: block;
-//     // position: absolute;
-//     // bottom: 0;
-//     // left: 0;
-//     // background-color: #ff4081;
-//     // left: 10%;
-//   }
-//   & .active{
-//     font-weight: bold;
-//     text-transform: uppercase;
-//   }
-//   & .mdl-navigation__link.active{
-//     font-weight: bold;
-//     text-transform: uppercase;
-//     background-color: rgba(0, 0, 0, 0.09)
-//   }
-//   & .mdl-layout__tab.active:after{
-//     content: "";
-//     width: 80%;
-//     height: 2px;
-//     display: block;
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     background-color: rgb(255,64,129);
-//     left: 10%;
-//   }
-// }
-// .portfolio_body_container{
-//   text-align: center;
-//   margin: 4em 0 1em 0;
-// }
-// .portfolio_body{
-//   background-image: url(./images/arq4.png);
-//   height: -webkit-fill-available;
-// }
-// @media screen and (min-width:900px) {
-//   // #logoContainer{
-//   //   display: block;
-//   // }
-//   // .mdl-navigation {
-//   //   display: flex
-//   //}
-//   .page-content{
-//     max-width: 1024px;
-//   }
-// }
-// .page-content{
-//   width: 90%;
-//   margin: 0 auto;
-//   text-align: justify;
-// }
 .card {
     width: 100%;
     margin-bottom: 1.5em;
@@ -106,12 +42,6 @@ body {
             margin: 8px 0 7px;
             text-transform: uppercase;
             font-weight: bolder; // & :first-child{
-            //   text-transform: uppercase;
-            //   font-weight: bolder;
-            // }
-            // & :last-child{
-            //   float: right
-            // }
         }
     }
     & .mdl-card__actions {
@@ -128,8 +58,4 @@ body {
 
 .mdl-card {
     min-height: auto
-}
-
-.mdl-layout__header .mdl-layout__drawer-button {
-    //background-color: rgba(62, 116, 148, 0.6784313725490196);
 }
