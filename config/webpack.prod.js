@@ -1,11 +1,13 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const MakeDirWebpackPlugin = require('make-dir-webpack-plugin');
 
-var basePath = __dirname
-var root = path.join(basePath, "..");
+const basePath = __dirname
+const root = path.join(basePath, "..");
 
 module.exports = merge(common, {
 
@@ -18,6 +20,11 @@ module.exports = merge(common, {
     rules: []
   },
   plugins: [
+
+    new CleanWebpackPlugin([
+      './dist',
+      './dist/images'
+    ], { root: root }),
 
     new webpack.optimize.ModuleConcatenationPlugin(),
 
@@ -63,6 +70,13 @@ module.exports = merge(common, {
         removeComments: true,
         removeRedundantAttributes: true
       }
+    }),
+    // well-known folder for cerboot certificate
+    new MakeDirWebpackPlugin({
+      dirs: [
+        { path: './dist/.well-known' },
+        { path: './dist/.well-known/acme-challenge' }
+      ]
     }),
   ]
 })
