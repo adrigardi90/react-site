@@ -19,20 +19,20 @@ export const Description = () => (
                 <h3>Working as a team</h3>
                 <p> Working in a healthy atmosphere promoting the cooperation</p>
                 <div className="mdl-grid mdl-grid--spacing description__team__list">
-                    <div className="mdl-cell mdl-cell--4-col">
-                        <div>
+                    <div className="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--middle">
+                        <div className="description__team__list-container">
                             <img src="./../../images/smile.png" alt="" />
                             <p>Friendly</p>
                         </div>
                     </div>
-                    <div className="mdl-cell mdl-cell--4-col">
-                        <div>
+                    <div className="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--middle">
+                        <div className="description__team__list-container">
                             <img src="./../../images/thumbs.png" alt="" />
                             <p>Optimistic</p>
                         </div>
                     </div>
-                    <div className="mdl-cell mdl-cell--4-col">
-                        <div>
+                    <div className="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--middle">
+                        <div className="description__team__list-container">
                             <img src="./../../images/proactive.png" alt="" />
                             <p>Proactive</p>
                         </div>

@@ -44,6 +44,7 @@
     &__team {
         padding: 10rem 0 10rem 0;
         &__list {
+            justify-content: center;
             margin: 50px 0 20px 0;
             & p {
                 font-size: 1.375rem;
@@ -52,11 +53,18 @@
             & img {
                 width: 55px;
             }
+            @media (max-width: 500px) {
+                &-container {
+                    margin-bottom: 1rem;
+                }
+            }
         }
     }
     &__studies {
         padding: 10rem 0 10rem 0;
         background-image: url(./../../images/books.png);
-        background-size: 100%;
+        @media (min-width: 1025px) {
+            background-size: 100%;
+        }
     }
 }
