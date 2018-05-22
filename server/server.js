@@ -12,8 +12,8 @@ const port = 3000;
 const router = require('./api');
 
 const options = {
-    cert: fs.readFileSync('./sslcert/fullchain.pem'),
-    key: fs.readFileSync('./sslcert/privkey.pem')
+    cert: fs.readFileSync(path.join(__dirname, './sslcert/fullchain.pem')),
+    key: fs.readFileSync(path.join(__dirname, './sslcert/privkey.pem'))
 };
 
 app.use(express.static(path.join(__dirname, '../dist')));
@@ -28,4 +28,4 @@ app.get('*', (req, res) => {
 })
 
 app.listen(8080);
-//https.createServer(options, app).listen(8443);
+https.createServer(options, app).listen(8443);
