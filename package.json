@@ -56,6 +56,8 @@
   "dependencies": {
     "csv-loader": "^2.1.1",
     "d3": "^5.0.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
     "react": "^16.0.0"
   }
 }
