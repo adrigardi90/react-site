@@ -78,9 +78,9 @@ export class Contact extends React.Component<{}, State>{
                         </div>
 
                     ) : (
-                            <div>
+                            <div className="contact-container">
                                 <h2>Contact me and send a message</h2>
-                                <p>Contact me and send a message</p>
+                                <p>Please, fill out the mandatory fields</p>
                                 <form onSubmit={this.handleSubmit}>
 
                                     <Input

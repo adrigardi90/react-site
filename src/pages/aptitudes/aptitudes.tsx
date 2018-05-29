@@ -15,23 +15,26 @@ export const Aptitudes = () => (
     <section className="mdl-layout__tab-panel is-active aptitudes">
 
         <div className="aptitudes__summary">
-            <h2>Technology stack</h2>
-            <p className="aptitudes__subtitle">Having an overview over all the layer that data go through</p>
+            <div>
+                <h2>Technology stack</h2>
+                <p className="aptitudes__subtitle">Having an overview over all the layer that data go through</p>
 
-            <div className="mdl-grid aptitudes-section">
-                {
-                    dataAptitudes.map((apt: any) => (
-                        <div className="mdl-cell aptitudes-section__card" id="#/">
-                            <AptitudeCard
-                                key={apt.i}
-                                title={apt.title}
-                                icon={apt.icon}
-                                description={apt.description}
-                                click={scrollToSection(apt.tag)} />
-                        </div>
-                    ))
-                }
+                <div className="mdl-grid aptitudes-section">
+                    {
+                        dataAptitudes.map((apt: any) => (
+                            <div className="mdl-cell aptitudes-section__card" id="#/">
+                                <AptitudeCard
+                                    key={apt.i}
+                                    title={apt.title}
+                                    icon={apt.icon}
+                                    description={apt.description}
+                                    click={scrollToSection(apt.tag)} />
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
+
         </div>
         <div className="aptitudes__front" id="front">
             <div className="aptitudes-section">

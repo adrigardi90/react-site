@@ -26,11 +26,11 @@ export const frontEnd = {
     basic : [
         {
             name: "javascript",
-            icon: 'js.png'
+            icon: 'javascript.png'
         },
         {
             name: "typescript",
-            icon: 'ts.png'
+            icon: 'typescript.png'
         },
         {
             name: "html",

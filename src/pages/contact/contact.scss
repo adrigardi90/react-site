@@ -1,19 +1,39 @@
 .contact {
-    width: 650px;
+    width: 100%;
     margin: 0 auto;
+    @media screen and (min-width: 1024px) {
+        width: 650px;
+    }
     & h2 {
-        font-size: 45px;
+        font-size: 35px;
         font-weight: 300;
-        line-height: 56px;
+        line-height: 45px;
         text-align: left;
         color: #555555;
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 45px;
+            line-height: 56px;
+        }
     }
     & p {
         color: #555555;
         text-align: left;
-        font-size: 17px;
+        font-size: 14px;
         font-weight: 200;
         margin-bottom: 3rem;
+        @media screen and (min-width: 768px) {
+            font-size: 17px;
+        }
+    }
+    &-container{
+        margin: 0 1rem 0 1rem;
+        @media screen and (min-width: 1024px) {
+            margin: 0;
+        }
     }
     &__submit {
         padding-top: 30px;

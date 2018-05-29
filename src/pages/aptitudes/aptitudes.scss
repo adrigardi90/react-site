@@ -10,10 +10,16 @@
     &__title {
         font-weight: 300;
         color: #161d28;
-        font-size: 45px;
+        font-size: 35px;
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 40px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 45px;
+        }
     }
     &__subtitle {
-        font-size: 1.375rem;
+        font-size: 1rem;
         line-height: 1.636;
         max-width: 800px;
         font-family: sans-serif;
@@ -21,9 +27,15 @@
         color: #646f79;
         margin: 0 auto;
         margin-bottom: 5rem;
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 1.2rem;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 1.375rem;
+        }
     }
     &-section {
-        //width: 100%;
+        width: 90%;
         justify-content: center;
         margin: 0 auto;
         text-align: justify;
@@ -50,8 +62,19 @@
     &__summary {
         padding: 2rem 0 10rem 0;
         & h2 {
-            font-weight: 300; //font-size: 34px;
-            color: #161d28; //margin: 0 0 40px 0;
+            font-weight: 300;
+            color: #161d28;
+            font-size: 35px;
+            @media screen and (min-width: 768px) and (max-width: 1024px) {
+                font-size: 40px;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 45px;
+            }
+        }
+        &>div {
+            width: 90%;
+            margin: 0 auto;
         }
     }
     &__front {
@@ -60,7 +83,7 @@
             justify-content: center;
             margin-bottom: 6rem;
             & img {
-                width: 80px;
+                width: 85px;
             }
         }
         &__libraries {
@@ -69,7 +92,10 @@
                 justify-content: center;
             }
             & img {
-                width: 95px;
+                width: 85px;
+                @media screen and (min-width: 768px) {
+                    font-size: 95px;
+                }
             }
         }
         &__styling {
@@ -78,7 +104,10 @@
                 justify-content: center;
             }
             & img {
-                width: 99px;
+                width: 85px;
+                @media screen and (min-width: 768px) {
+                    font-size: 99px;
+                }
             }
         }
         &__bundling {
@@ -87,16 +116,22 @@
                 justify-content: center;
             }
             & img {
-                width: 95px;
+                width: 85px;
+                @media screen and (min-width: 768px) {
+                    font-size: 95px;
+                }
             }
         }
     }
     &__separator {
         background-image: url(./../../images/mix2.png);
         padding: 15rem 0 15rem 0;
-        &-two{
+        &-two {
             background-image: url(./../../images/cloud2.jpg);
-            padding: 15rem 0 15rem 0; 
+            padding: 15rem 0 15rem 0;
+            @media (min-width: 1025px) {
+                background-size: 100%;
+            }
         }
     }
     &__back {
@@ -105,7 +140,10 @@
             justify-content: center;
             margin-bottom: 6rem;
             & img {
-                width: 150px;
+                width: 120px;
+                @media screen and (min-width: 768px) {
+                    width: 150px;
+                }
             }
         }
         &__libraries {
@@ -115,7 +153,10 @@
                 justify-content: center;
             }
             & img {
-                width: 150px;
+                width: 130px;
+                @media screen and (min-width: 768px) {
+                    width: 150px;
+                }
             }
         }
         &__databases {
@@ -125,7 +166,10 @@
                 justify-content: center;
             }
             & img {
-                width: 110px;
+                width: 100px;
+                @media screen and (min-width: 768px) {
+                    width: 150px;
+                }
             }
         }
     }
@@ -135,7 +179,13 @@
             justify-content: center;
             margin-bottom: 6rem;
             & img {
-                width: 150px;
+                width: 120px;
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    font-size: 130px;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 150px;
+                }
             }
         }
         &__cloud {
@@ -145,7 +195,13 @@
                 justify-content: center;
             }
             & img {
-                width: 150px;
+                width: 120px;
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    font-size: 130px;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 150px;
+                }
             }
         }
     }
