@@ -8,7 +8,7 @@ const post = (data: object) : Promise<{}> => (
         })
 );
 
-async function sendEmail(data: {}): Promise<{}>{
+async function sendEmail(data: {}): Promise<{}>{ 
     try {
         const res: any = await post(data)
         return res.status;

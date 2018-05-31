@@ -10,7 +10,7 @@ export const Description = () => (
         <div className="description__challenges">
             <div className="description-section">
                 <h1>Always looking for new challenges</h1>
-                <p>Building new products and systems from scratch with the right solution is something really exciting you cannot stop doing it once you've tried it </p>
+                <p>Building new products and systems from scratch with the right solution is something really exciting </p>
             </div>
         </div>
 

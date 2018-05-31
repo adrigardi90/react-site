@@ -6,6 +6,9 @@ const path = require('path');
 const https = require('https');
 const fs = require('fs');
 
+// ENV
+const env = process.env.NODE_ENV || 'dev';
+
 // Ports
 const httpPort = 8080;
 const httpsPort = 8443;
@@ -28,12 +31,18 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 })
 
-//HTTP
-http.createServer(app).listen(httpsPort, () => {
-    console.log("Listening http..." + httpPort);
-});
+if (env === 'dev') {
+    //HTTP
+    http.createServer(app).listen(httpPort, () => {
+        console.log("Listening http... " + httpPort);
+    });
+}
 
-// HTTPS
-https.createServer(options, app).listen(httpsPort, () => {
-    console.log("Listening https..." + httpsPort);
-});
+if (env === 'prod') {
+    // HTTPS
+    https.createServer(options, app).listen(httpsPort, () => {
+        console.log("Listening https... " + httpsPort);
+    });
+}
+
+

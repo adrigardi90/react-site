@@ -4,7 +4,8 @@ const router = express.Router();
 const getMessage = require('./util');
 
 router.post('/sendEmail', (req, res) => {
-    var message = getMessage(req.body);
+    console.log(req.headers.host)
+    const message = getMessage(req.body);
     console.log(message)
     const transporter = nodemailer.createTransport({
         service: 'Hotmail',
