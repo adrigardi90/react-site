@@ -83,11 +83,7 @@ export const frontEnd = {
         {
             name: "grunt",
             icon: 'grunt.png'
-        },
-        {
-            name: "yo",
-            icon: 'yo.png'
-        },
+        }
     ]
 }
 

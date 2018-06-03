@@ -4,9 +4,15 @@ const router = express.Router();
 const getMessage = require('./util');
 
 router.post('/sendEmail', (req, res) => {
-    console.log(req.headers.host)
+    const host = req.headers.host;
+
+    if (env === 'prod' && host !== 'theagdsite.ga') {
+        res.sendStatus(500);
+    }
+
     const message = getMessage(req.body);
     console.log(message)
+    
     const transporter = nodemailer.createTransport({
         service: 'Hotmail',
         auth: {

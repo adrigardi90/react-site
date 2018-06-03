@@ -17,7 +17,7 @@ export const Aptitudes = () => (
         <div className="aptitudes__summary">
             <div>
                 <h2>Technology stack</h2>
-                <p className="aptitudes__subtitle">Having an overview and knowledge over all the layers that data go through</p>
+                <p className="aptitudes__subtitle">Getting an overview and knowledge over all the several layers</p>
 
                 <div className="mdl-grid aptitudes-section">
                     {

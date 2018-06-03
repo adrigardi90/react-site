@@ -1,3 +1,3 @@
 export const environment = {
-    PORT: 8443
+    API: 'http://localhost:8443/api/sendEmail'
 }
