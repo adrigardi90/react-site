@@ -38,8 +38,9 @@ export class Contact extends React.Component<{}, State>{
     }
 
     handleChange = (event) => {
-        const target = event.target;
+        const target: any = event.target;
         this.setState({
+            ...this.state,
             [target.name]: target.value,
         })
     }
