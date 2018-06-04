@@ -128,10 +128,10 @@ export const devops = {
             name: "aws",
             icon: 'amazon.png'
         },
-        {
-            name: "azure",
-            icon: 'azure.png'
-        },
+        // {
+        //     name: "azure",
+        //     icon: 'azure.png'
+        // },
         {
             name: "heroku",
             icon: 'heroku.png'

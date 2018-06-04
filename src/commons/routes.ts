@@ -6,22 +6,17 @@ export interface RouteType {
 
 export const Routes: Array<RouteType> = [
     // {
-    //     name: 'About', 
-    //     path: '/'
-    // },
-
-    // {
     //     name: 'Projects',
     //     path: '/projects'
     // },
 
     {
-        name: 'Aptitudes', 
+        name: 'Aptitudes',
         path: '/aptitudes'
     },
 
     {
-        name: 'Contact', 
+        name: 'Contact',
         path: '/contact'
     }
 ]
