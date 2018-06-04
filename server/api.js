@@ -3,6 +3,8 @@ const nodemailer = require('nodemailer');
 const router = express.Router();
 const getMessage = require('./util');
 
+const env = process.env.NODE_ENV || 'dev';
+
 router.post('/sendEmail', (req, res) => {
     const host = req.headers.host;
 

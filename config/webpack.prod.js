@@ -21,6 +21,11 @@ module.exports = merge(common, {
   },
   plugins: [
 
+    new webpack.NormalModuleReplacementPlugin(
+      /src\/environments\/environment\.ts/,
+      './environment.prod.ts'
+    ),
+
     new CleanWebpackPlugin([
       './dist',
       './dist/images'

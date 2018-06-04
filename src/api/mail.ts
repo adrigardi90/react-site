@@ -1,4 +1,4 @@
-import { environment } from './../environment/environment';
+import { environment } from './../environments/environment';
 
 const headers = new Headers({ 'Content-Type': 'application/json' });
 
