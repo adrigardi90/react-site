@@ -44,7 +44,21 @@ export const Description = () => (
         <div className="description__studies">
             <div className="description-section">
                 <h1>Keep learning</h1>
-                <p>Trying to find any opportunity to learn something new and innovative</p>
+                <p>Trying to find any opportunity to learn something new</p>
+            </div>
+        </div>
+
+        <div className="description__innovation">
+            <div className="description-section">
+                <h3>Innovation</h3>
+                <p>Interested in the new fields that come up with the innovation</p>
+                <div className="mdl-grid mdl-grid--spacing description__team__list">
+                    <div className="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--middle">
+                        <div className="description__innovation__image">
+                            <img src="./../../images/brain.jpeg" alt="" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
