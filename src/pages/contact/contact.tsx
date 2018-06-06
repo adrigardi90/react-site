@@ -138,7 +138,7 @@ export class Contact extends React.Component<{}, State>{
                                         }
                                         {
                                             invalid && !this.state.valid &&
-                                            <p className="contact__submit-error">Please enter the mandatories fields</p>
+                                            <p className="contact__submit-error">Please enter the mandatory fields</p>
                                         }
                                     </div>
                                 </form>
