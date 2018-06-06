@@ -1,6 +1,7 @@
 .contact {
     width: 100%;
     margin: 0 auto;
+    margin-top: -1rem;
     @media screen and (min-width: 1024px) {
         width: 650px;
     }
@@ -42,9 +43,13 @@
         & p {
             font-size: 21px;
             margin-top: 5px;
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 200;
             margin-left: 18px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 17px;
+            }
         }
         &-error {
             color: #b10000 !important;

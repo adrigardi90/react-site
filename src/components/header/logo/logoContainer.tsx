@@ -20,7 +20,11 @@ const removeMenuStyle = (event) => {
     ele2.classList.remove('is-visible')
 
     const ele3 = document.getElementsByClassName('mdl-layout__obfuscator is-visible')
-    ele3.length != 0 ? ele3[0].classList.remove('is-visible') : ele3
+    ele3.length != 0 ? ele3[0].classList.remove('is-visible') : ele3;
+
+    const header = document.getElementById('header');
+    header.classList.remove('is-casting-shadow');
+    document.querySelector(`#portfolio-body`).scrollTo(0,0);
 }
 
 export const LogoContainer = (props: Props) => {
