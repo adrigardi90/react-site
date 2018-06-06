@@ -6,9 +6,10 @@ const getMessage = require('./util');
 const env = process.env.NODE_ENV || 'dev';
 
 router.post('/sendEmail', (req, res) => {
-    const host = req.headers.host;
-
-    if (env === 'prod' && host !== 'theagdsite.ga') {
+    const host = req.headers.origin;
+    console.log(req.headers);
+    
+    if (env === 'prod' && host !== 'https://theagdsite.ga') {
         res.sendStatus(500);
     }
 

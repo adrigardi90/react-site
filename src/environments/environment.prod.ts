@@ -1,3 +1,3 @@
 export const environment = {
-    API: 'http://localhost:8443/api/sendEmail'
+    API: 'https://theagdsite.ga/api/sendEmail'
 }
