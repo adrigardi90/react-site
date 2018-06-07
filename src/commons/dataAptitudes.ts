@@ -4,21 +4,21 @@ export const dataAptitudes = [
         title: "Front End",
         icon: 'frontend.png',
         tag: 'front',
-        description: 'Simple game using canvas API with Html5, Css and Javascript',
+        description: 'The pretty and lovely face exposed to everyone to be judged :)',
     },
     {
         id: 2,
         title: "Back End",
         icon: 'back.png',
         tag: 'back',
-        description: 'Simple game using canvas API with Html5, Css and Javascript',
+        description: 'Managing and storing all the information behind the scenes...',
     },
     {
         id: 3,
         title: "Devops",
         icon: 'devops.png',
         tag: 'devops',
-        description: 'Simple game using canvas API with Html5, Css and Javascript',
+        description: 'Configuration and deployment to verify the outcome in real life!',
     },
 ];
 
