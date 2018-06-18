@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const https = require('https');
 const fs = require('fs');
+const compression = require('compression')
 
 // ENV
 const env = process.env.NODE_ENV || 'dev';
@@ -22,8 +23,13 @@ const options = {
     key: fs.readFileSync(path.join(__dirname, './sslcert/privkey.pem'))
 };
 
+// compress all responses
+app.use(compression({level: 9}));
+
 app.use(express.static(path.join(__dirname, '../dist')));
 app.use(bodyParser.json());
+
+// Api 
 app.use('/api', router);
 
 // Redirect to index.html

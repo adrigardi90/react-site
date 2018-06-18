@@ -22,7 +22,7 @@ module.exports = {
       'lodash',
       'react-router-dom'
     ],
-    babel : 'babel-polyfill'
+    babel: 'babel-polyfill'
   },
 
   output: {
@@ -105,7 +105,11 @@ module.exports = {
       {
         test: /\.(png|jpg)$/,
         exclude: /node_modules/,
-        loader: 'url-loader?name=./images/[name].[ext]'
+        loader: 'url-loader',
+        options: {
+          name: './images/[name].[ext]',
+          limit: 100
+        }
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
@@ -127,8 +131,8 @@ module.exports = {
       allChunks: true,
     }),
 
-    new CopyWebpackPlugin([{
-      from: './images/*.*'
-    }]),
+    // new CopyWebpackPlugin([{
+    //   from: './images/*.*'
+    // }]),
   ]
 }

@@ -55,7 +55,7 @@ export const Description = () => (
                 <div className="mdl-grid mdl-grid--spacing description__team__list">
                     <div className="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--middle">
                         <div className="description__innovation__image">
-                            <img src="./../../images/brain.jpeg" alt="" />
+                            <img src="./../../images/brain.jpg" alt="" />
                         </div>
                     </div>
                 </div>
