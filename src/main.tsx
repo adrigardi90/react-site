@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { RouterComponent } from './router';
 
-ReactDOM.render(
-    <RouterComponent/>,
+ReactDOM.hydrate(
+    <RouterComponent />,
     document.getElementById('root')
 );

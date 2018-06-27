@@ -10,7 +10,7 @@ var root = path.join(basePath, "..");
 module.exports = merge(common, {
 
   output: {
-    filename: '[hash].[name].js'
+    filename: '[name].js'
   },
 
   devtool: 'source-map',

@@ -12,7 +12,7 @@ const root = path.join(basePath, "..");
 module.exports = merge(common, {
 
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].js',
     publicPath: '/'
   },
 
@@ -35,7 +35,7 @@ module.exports = merge(common, {
 
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: 'vendor.[chunkhash].js',
+      filename: 'vendor.js',
       minChunks(module) {
         return module.context &&
           module.context.indexOf('node_modules') >= 0;

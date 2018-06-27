@@ -26,7 +26,7 @@ module.exports = {
   },
 
   output: {
-    path: path.join(root, 'dist'),
+    path: path.join(root, 'dist/client'),
   },
 
 
@@ -126,7 +126,7 @@ module.exports = {
   plugins: [
 
     new ExtractTextPlugin({
-      filename: '[chunkhash].[name].css',
+      filename: '[name].css',
       disable: false,
       allChunks: true,
     }),
