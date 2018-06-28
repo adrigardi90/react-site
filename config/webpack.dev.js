@@ -1,11 +1,10 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-var basePath = __dirname;
-var root = path.join(basePath, "..");
+const basePath = __dirname;
 
 module.exports = merge(common, {
 

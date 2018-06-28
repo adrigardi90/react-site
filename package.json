@@ -11,7 +11,8 @@
     "run:dev": "npm run build:dev && npm run serve:dev",
     "run:pro": "npm run build:pro && npm run serve:pro",
     "serve:dev": "NODE_ENV=dev node server/server.js ",
-    "serve:pro": "NODE_ENV=prod node server/server.js "
+    "serve:pro": "NODE_ENV=prod node server/server.js ",
+    "serve:ssr": "NODE_ENV=dev node dist/server/server.js "
   },
   "author": "",
   "license": "ISC",

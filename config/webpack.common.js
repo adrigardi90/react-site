@@ -1,9 +1,10 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-var basePath = __dirname;
-var root = path.join(basePath, "..");
+const basePath = __dirname;
+const root = path.join(basePath, "..");
 
 module.exports = {
 
@@ -131,8 +132,8 @@ module.exports = {
       allChunks: true,
     }),
 
-    // new CopyWebpackPlugin([{
-    //   from: './images/*.*'
-    // }]),
+    new CleanWebpackPlugin([
+      './dist/client',
+    ], { root: root }),
   ]
 }

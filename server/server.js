@@ -42,7 +42,7 @@ app.use('/api', router);
 
 // Redirect to index.html
 app.get("*", (req, res, next) => {
-    
+
     const context = {}
     //res.sendFile(path.join(__dirname, '../dist/index.html'));
     const markup = renderToString(
@@ -61,25 +61,26 @@ app.get("*", (req, res, next) => {
     res.send(`
         <!DOCTYPE html>
         <html>
-          <head>
-            <title>SSR with RR</title>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-            <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-            <link href="/client/app.css?5a24b5a76daed83b71aa" rel="stylesheet">
-            <link href="/client/server.css" rel="stylesheet">
-            <link href="/client/appStyles.css" rel="stylesheet">
-            <script defer="defer" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-            <script src="/client/vendor.js" defer></script>
-            <script src="/client/app.js" defer></script>
-            <script defer="defer" src="/client/appStyles.js"></script>
-            <script src="/client/babel.js" defer></script>
-          </head>
-    
-          <body>
-            <div id="app">${markup}</div>
-          </body>
+            <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+                <title>SSR with RR</title>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+                <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+                <link href="/client/app.css" rel="stylesheet">
+                <link href="/client/appStyles.css" rel="stylesheet">
+            </head>
+        
+            <body>
+                <div id="root">${markup}</div>
+            </body>
 
-          
+            <script defer="defer" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+            <script type="text/javascript" src="/client/manifest.js"></script>
+            <script type="text/javascript" src="/client/vendor.js"></script>
+            <script type="text/javascript" src="/client/babel.js"></script>
+            <script type="text/javascript" src="/client/app.js"></script>
+            <script type="text/javascript" src="/client/appStyles.js"></script>          
         </html>
       `);
 })

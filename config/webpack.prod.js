@@ -4,10 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
-const MakeDirWebpackPlugin = require('make-dir-webpack-plugin');
 
 const basePath = __dirname
-const root = path.join(basePath, "..");
 
 module.exports = merge(common, {
 
@@ -26,20 +24,19 @@ module.exports = merge(common, {
       './environment.prod.ts'
     ),
 
-    new CleanWebpackPlugin([
-      './dist',
-      './dist/images'
-    ], { root: root }),
-
     new webpack.optimize.ModuleConcatenationPlugin(),
 
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'vendor',
+    //   filename: 'vendor.js',
+    //   minChunks(module) {
+    //     return module.context &&
+    //       module.context.indexOf('node_modules') >= 0;
+    //   }
+    // }),
+
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: 'vendor.js',
-      minChunks(module) {
-        return module.context &&
-          module.context.indexOf('node_modules') >= 0;
-      }
+      names: ['vendor', 'manifest'],
     }),
 
     new webpack.optimize.UglifyJsPlugin({

@@ -1,10 +1,11 @@
-var path = require('path');
-var nodeExternals = require('webpack-node-externals');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var webpack = require('webpack');
+const path = require('path');
+const nodeExternals = require('webpack-node-externals');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-var basePath = __dirname;
-var root = path.join(basePath, "..");
+const basePath = __dirname;
+const root = path.join(basePath, "..");
 
 module.exports = {
 
@@ -18,8 +19,8 @@ module.exports = {
   target: 'node',
   externals: [nodeExternals()],
   output: {
-    path: path.join(root, 'server'),
-    filename: 'serverC.js'
+    path: path.join(root, 'dist/server'),
+    filename: 'server.js'
   },
 
 
@@ -68,5 +69,9 @@ module.exports = {
       new webpack.ProvidePlugin({
         "React": "react",
       }),
+
+      new CleanWebpackPlugin([
+        './dist/server',
+      ], { root: root }),
   ]
 }

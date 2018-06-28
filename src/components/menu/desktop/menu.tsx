@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { filter } from 'lodash';
 
 import { RouteType } from './../../../commons/routes';
@@ -42,12 +42,12 @@ export const Menu = (props: Props) => (
     <nav className="mdl-navigation">
         {
             props.list.map((route, i) => (
-                <Link
+                <NavLink
                     id={i}
                     to={route.path}
                     key={i}
                     className={props.style}
-                    onClick={hideMobileMenu(props.style, i)}>{route.name}</Link>
+                    onClick={hideMobileMenu(props.style, i)}>{route.name}</NavLink>
             ))
         }
     </nav>
