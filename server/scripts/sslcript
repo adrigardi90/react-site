@@ -1,5 +1,5 @@
 #!/bin/bash
 clear
 
-ln -s /etc/letsencrypt/live/theagdsite.ga/fullchain.pem ./../sslcert/fullchain.pem
-ln -s /etc/letsencrypt/live/theagdsite.ga/privkey.pem ./../sslcert/privkey.pem
+ln -s /etc/letsencrypt/live/theagdsite.ga/fullchain.pem ./../../dist/server/sslcert/fullchain.pem
+ln -s /etc/letsencrypt/live/theagdsite.ga/privkey.pem ./../../dist/server/sslcert/privkey.pem

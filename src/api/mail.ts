@@ -1,12 +1,13 @@
 import { environment } from './../environments/environment';
+const isBrowser = require('is-browser')
 
-// const headers = new Headers({ 'Content-Type': 'application/json' });
+const headers = isBrowser ? new Headers({ 'Content-Type': 'application/json' }):{};
 
 const post = (data: object): Promise<{}> => (
     fetch(environment.API, {
         method: 'POST',
         body: JSON.stringify(data),
-        // headers: headers
+        headers: headers
     })
 );
 

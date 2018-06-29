@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const MakeDirWebpackPlugin = require('make-dir-webpack-plugin');
 
 const basePath = __dirname
 
@@ -74,11 +75,11 @@ module.exports = merge(common, {
       }
     }),
     // well-known folder for cerboot certificate
-    new MakeDirWebpackPlugin({
-      dirs: [
-        { path: './dist/.well-known' },
-        { path: './dist/.well-known/acme-challenge' }
-      ]
-    }),
+    // new MakeDirWebpackPlugin({
+    //   dirs: [
+    //     { path: './dist/.well-known' },
+    //     { path: './dist/.well-known/acme-challenge' }
+    //   ]
+    // }),
   ]
 })

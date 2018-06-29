@@ -27,7 +27,7 @@ module.exports = merge(common, {
   },
 
   plugins: [
-
+    
     new HtmlWebpackPlugin({
       filename: 'index.html', // Name of file in ./dist/
       template: 'index.html', // Name of template in ./src

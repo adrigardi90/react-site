@@ -30,7 +30,6 @@ module.exports = {
     path: path.join(root, 'dist/client'),
   },
 
-
   module: {
     rules: [
 
