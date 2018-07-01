@@ -17,9 +17,9 @@ router.post('/sendEmail', (req, res) => {
     console.log(message)
     
     const transporter = nodemailer.createTransport({
-        service: 'Hotmail',
+        service: 'gmail',
         auth: {
-            user: 'adrigar90@hotmail.com',
+            user: 'mailtestingpoc90@gmail.com',
             pass: 'xxx'
         }
     });

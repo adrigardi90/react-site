@@ -5,6 +5,7 @@ export const Html = ({ title, description, body}) => (
             <head>
                 <meta charset="utf-8">
                 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+                <meta name="description" content="${description}”">
                 <meta property=”og:title” content=”${title}”/>
                 <meta property=”og:description" content=”${description}”/>
                 <meta property="og:image" content="https://theagdsite.ga/images/me.jpg"/>

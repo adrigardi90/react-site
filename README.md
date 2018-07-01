@@ -1,2 +1,2 @@
 # portfolio-mailer
-Responsive personal portfolio with React.js and Material design lite
+Responsive personal site with ReactJS, NodeJS, Express and Material design lite. Server Side Rendering for SEO

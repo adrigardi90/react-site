@@ -100,7 +100,12 @@ module.exports = {
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
+        exclude: /node_modules/,
+        loader: 'url-loader',
+        options: {
+          name: './images/[name].[ext]',
+          limit: 10
+        }
       },
       {
         test: /\.(png|jpg)$/,
