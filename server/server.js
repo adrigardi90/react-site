@@ -57,9 +57,10 @@ app.get("*", (req, res, next) => {
             </App>
         </StaticRouter>
     );
-    const title = 'Agdsite';
+    const title = 'The AGD Site';
+    const description = 'Simple personal site';
 
-    res.send(Html({title, body}));
+    res.send(Html({title, description, body}));
 })
 
 if (env === 'dev') {

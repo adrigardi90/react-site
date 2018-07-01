@@ -1,6 +1,6 @@
 .logo-container {
     background-size: 100%;
-    padding-top: 6px;
+    padding-top: 25px;
     @media (min-width: 1025px) {
 
     }
@@ -37,7 +37,6 @@
     }
     & .portfol¡o_social_container {
         display: flex;
-        margin-top: -17px;
         & div:first-child {
             z-index: 2;
         }
@@ -69,5 +68,5 @@
 }
 
 .is-compact .portfol¡o_social_container {
-    margin-top: 1px;
+    margin-top: -17px;
 }

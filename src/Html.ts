@@ -1,10 +1,13 @@
-export const Html = ({ title, body}) => (
+export const Html = ({ title, description, body}) => (
     `
-        <!DOCTYPE html>
+        <!DOCTYPE html xmlns:og="http://ogp.me/ns#">
         <html>
             <head>
                 <meta charset="utf-8">
                 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+                <meta property=”og:title” content=”${title}”/>
+                <meta property=”og:description" content=”${description}”/>
+                <meta property="og:image" content="https://theagdsite.ga/images/me.jpg"/>
                 <title>${title}</title>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
                 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
