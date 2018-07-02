@@ -18,6 +18,19 @@
             }
         }
     }
+    &-logo{
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+    &-menu{
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
 }
 
 .mdl-layout__drawer.is-visible {

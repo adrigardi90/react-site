@@ -24,7 +24,17 @@ const removeMenuStyle = (event) => {
 
     const header = document.getElementById('header');
     header.classList.remove('is-casting-shadow');
-    document.querySelector(`#portfolio-body`).scrollTo(0,0);
+    document.querySelector(`#portfolio-body`).scrollTo(0, 0);
+}
+
+const keepLogoFormat = (event) => {
+    const header = document.getElementById('header');
+    const classList = header.classList;
+    const isCompact = classList.contains('is-casting-shadow')
+    if (isCompact) {
+        classList.add('is-compact');
+        classList.remove('is-animating');
+    }
 }
 
 export const LogoContainer = (props: Props) => {
@@ -33,25 +43,24 @@ export const LogoContainer = (props: Props) => {
 
     return (
         <div className={style}>
-            
+
             <div className="logo-container__profile">
                 <Link to="/">
-                    <div 
+                    <div
                         className="portfolio_logo"
                         onClick={removeMenuStyle}></div>
                 </Link>
             </div>
-            
-            
+
             <div className="portfol¡o_social_container">
                 <div className="content-grid mdl-grid">
-                    <a target="_blank" href="https://twitter.com/adrigardi90">
+                    <a target="_blank" href="https://twitter.com/adrigardi90" onClick={keepLogoFormat}>
                         <div id="twitter" className="portfolio_logo_twitter"></div>
                     </a>
-                    <a target="_blank" href="https://github.com/adrigardi90">
+                    <a target="_blank" href="https://github.com/adrigardi90" onClick={keepLogoFormat}>
                         <div id="github" className="portfolio_logo_github"></div>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/adrigardi90/">
+                    <a target="_blank" href="https://www.linkedin.com/in/adrigardi90/" onClick={keepLogoFormat}>
                         <div id="linkedin" className="portfolio_logo_linkedin"></div>
                     </a>
                 </div>

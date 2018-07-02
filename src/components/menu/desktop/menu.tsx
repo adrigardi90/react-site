@@ -35,7 +35,7 @@ const hideMobileMenu = (style: string, index: number) => (event) => {
 
     const header = document.getElementById('header');
     header.classList.remove('is-casting-shadow');
-    document.querySelector(`#portfolio-body`).scrollTo(0,0);
+    document.querySelector(`#portfolio-body`).scrollTo(0, 0);
 }
 
 export const Menu = (props: Props) => (
